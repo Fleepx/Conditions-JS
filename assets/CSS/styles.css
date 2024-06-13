@@ -4,33 +4,82 @@
 }
 
 #bienvenida {
-    display: flex;
+    display: none;
     text-align: start;
     justify-content: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 24px;
+    animation: animacionBienvenida 5s ease-out forwards;
+    opacity: 0;
+}
+@keyframes animacionBienvenida {
+    0% {
+        transform: translate(-50%, -10%);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-50%, -60%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
 }
 #desafio1 {
     width:100%;
-    display: flex;
+    display: none;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
 }
 #gente {
     position: center;
     width: 500px;
     filter: grayscale(1);
-    transition: filter 0.5s ease-out;
+    transition: filter 1s ease-out;
 }
 #gente:hover {
     filter: grayscale(0);
 }
+.enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.link {
+    text-decoration: none;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a {
+    text-decoration: none;
+}
 
-/*SEGUNDA PAGINA*/
+                /*SEGUNDA PAGINA*/
 
+#desafio2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem;
+}
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    margin: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 .opcion {
     display: flex;
@@ -39,8 +88,25 @@
     gap: 2rem;
 }
 .album {
-    width: 400px;
+    height: 300px;
 }
 input {
     width: 100px;
+}
+
+                /*TERCERA PAGINA*/
+
+#desafio3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.selecciones {
+    display: flex;
+    gap: 1rem;
+}
+#primero, #segundo, #tercero {
+    width: 40px;
 }

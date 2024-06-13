@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +8,71 @@
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
+
 <body>
-    <h2>Acá tenemos a la venta  estos 3 discos, pero máximo puedes llevarte 10</h2>
-    <div class="container">
+    <div id="desafio2">
 
-        <div class="opcion">
-            <img class="album" src="../imgs/VOLA - Applause of a distant Crowd.jpg" alt="Applause of a distant Crowd Disco">
-            <input id="vola" type="number">
+        <div class="instruccion">
+            <h2>Acá tenemos a la venta estos 3 discos, pero máximo puedes llevarte 10</h2>
         </div>
 
-        <div class="opcion">
-            <img class="album" src="../imgs/Taeko Onuki - Sunshower.jpg" alt="Sunshower Disco">
-            <input id="taeko" type="number">
-        </div>
+        <div class="container">
+            <div class="opcion">
+                <img class="album" src="../imgs/VOLA - Applause of a distant Crowd.jpg"
+                    alt="Applause of a distant Crowd Disco">
+                    <caption>VOLA - Applause of a distant Crowd</caption>
+                <input id="vola" type="number">
+            </div>
 
-        <div class="opcion">
-            <img class="album" src="../imgs/badbadnotgood - III.webp" alt="III Disco">
-            <input id="badbad" type="number">
+            <div class="opcion">
+                <img class="album" src="../imgs/Taeko Onuki - Sunshower.jpg" alt="Sunshower Disco">
+                <caption>Taeko Onuki - Sunshower</caption>
+                <input id="taeko" type="number">
+            </div>
+
+            <div class="opcion">
+                <img class="album" src="../imgs/badbadnotgood - III.webp" alt="III Disco">
+                <caption>badbadnotgood - III</caption>
+                <input id="badbad" type="number">
+            </div>
+
         </div>
+        <p id="respuesta"></p>
+        <button id="comprar" onclick="
+            var vola = Number(document.querySelector('#vola').value);
+            var taeko = Number(document.querySelector('#taeko').value);
+            var badbad = Number(document.querySelector('#badbad').value);
+            let respuesta = document.querySelector('#respuesta')
+            var suma = vola + taeko + badbad;
+    
+             if (suma === 0) {
+             respuesta.textContent = '';
+        
+                } else if (suma > 10) {
+                    respuesta.textContent = 'Te advertí que solo puedes llevar 10 como maximo.';
+                } else if (suma === 1) {
+                    respuesta.textContent = 'Muy buena elección, llevas '+suma+' disco.';
+            
+                }else {
+                    respuesta.textContent = 'Muy buena eleccion, llevas '+suma+' discos.';
+                }
+        ">Comprar</button>
+        
+
 
     </div>
-    <button id="comprar" onclick="
-    var vola = document.querySelector('#vola').value;
-    var taeko = document.querySelector('#taeko').value;
-    var badbad = document.querySelector('#badbad').value;
-    let respuesta = document.querySelector('#respuesta')
-    var suma = vola + taeko + badbad;
-
-    if (suma < 1) {
-    respuesta.textContent = '';
-
-      } else if (suma > 10) {
-        respuesta.textContent = 'Te advertí que solo puedes llevarte 10 como maximo.';
-
-      }else {
-         respuesta.textContent = 'Muy buena eleccion.';
-     }
-    ">Comprar</button>
-        <p id="respuesta"></p>
-        <a href="../../index.html">Volver</a>
-        <a href="./index3.html">Siguiente</a>
-
-    <script src="../JS/script.js"></script>
+    <div class="enlaces">
+        <a href="../../index.html">
+            <button class="link">
+                Volver
+            </button>
+        </a>
+        <a href="./index3.html">
+            <button class="link">
+                Siguiente
+            </button>
+        </a>
+    </div>
 </body>
+
 </html>
