@@ -43,8 +43,22 @@
             var taeko = Number(document.querySelector('#taeko').value);
             var badbad = Number(document.querySelector('#badbad').value);
             let respuesta = document.querySelector('#respuesta')
+            
+            if (vola < 0) {
+                vola = 0;
+                document.querySelector('#vola').value = 0;
+            }
+            if (taeko < 0) {
+                taeko = 0;
+                document.querySelector('#taeko').value = 0;
+            }
+            if (badbad < 0) {
+                badbad = 0;
+                document.querySelector('#badbad').value = 0;
+            }
+
             var suma = vola + taeko + badbad;
-    
+
              if (suma === 0) {
              respuesta.textContent = '';
         
