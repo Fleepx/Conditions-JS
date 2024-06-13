@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Condiciones</title>
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
+</head>
+<body>
+    <div id="bienvenida">
+        <h1>Bienvenido<span id="nombreUsuario"></span>, a este<br>nuevo desafio para ADL</h1>
+    </div>
+
+    <div id="desafio1">
+    <img id="gente" src="./assets/imgs/cualesquiera.jpg" alt="Gente" onclick="
+    const bordeRojo = document.querySelector('#gente')
+
+    if(bordeRojo.style.border === '2px solid red') {
+        bordeRojo.style.border = 'none'
+    } else {
+        bordeRojo.style.border = '2px solid red'
+    }
+    "/>
+    </div>
+    <a href="/index2.html">Siguiente</a>
+    <script src="./assets/JS/script.js"></script>
+</body>
+</html>

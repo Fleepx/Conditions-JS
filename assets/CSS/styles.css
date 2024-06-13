@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#bienvenida {
+    display: flex;
+    text-align: start;
+    justify-content: center;
+}
+#desafio1 {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+#gente {
+    position: center;
+    width: 500px;
+    filter: grayscale(1);
+    transition: filter 0.5s ease-out;
+}
+#gente:hover {
+    filter: grayscale(0);
+}
