@@ -22,3 +22,25 @@
 #gente:hover {
     filter: grayscale(0);
 }
+
+/*SEGUNDA PAGINA*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem;
+}
+.opcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.album {
+    width: 400px;
+}
+input {
+    width: 100px;
+}

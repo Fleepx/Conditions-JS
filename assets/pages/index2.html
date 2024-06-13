@@ -11,24 +11,42 @@
     <h2>Acá tenemos a la venta  estos 3 discos, pero máximo puedes llevarte 10</h2>
     <div class="container">
 
-        <div class="disco">
+        <div class="opcion">
             <img class="album" src="../imgs/VOLA - Applause of a distant Crowd.jpg" alt="Applause of a distant Crowd Disco">
-            <input type="number">
+            <input id="vola" type="number">
         </div>
 
-        <div class="disco">
+        <div class="opcion">
             <img class="album" src="../imgs/Taeko Onuki - Sunshower.jpg" alt="Sunshower Disco">
-            <input type="number">
+            <input id="taeko" type="number">
         </div>
 
-        <div class="disco">
+        <div class="opcion">
             <img class="album" src="../imgs/badbadnotgood - III.webp" alt="III Disco">
-            <input type="number">
+            <input id="badbad" type="number">
         </div>
 
-        <a href="../../index.html">Volver</a>
-        <a href="../pages/index3.html">Siguiente</a>
     </div>
+    <button id="comprar" onclick="
+    var vola = document.querySelector('#vola').value;
+    var taeko = document.querySelector('#taeko').value;
+    var badbad = document.querySelector('#badbad').value;
+    let respuesta = document.querySelector('#respuesta')
+    var suma = vola + taeko + badbad;
+
+    if (suma < 1) {
+    respuesta.textContent = '';
+
+      } else if (suma > 10) {
+        respuesta.textContent = 'Te advertí que solo puedes llevarte 10 como maximo.';
+
+      }else {
+         respuesta.textContent = 'Muy buena eleccion.';
+     }
+    ">Comprar</button>
+        <p id="respuesta"></p>
+        <a href="../../index.html">Volver</a>
+        <a href="./index3.html">Siguiente</a>
 
     <script src="../JS/script.js"></script>
 </body>
